@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:passwordfield/passwordfield.dart';
+import 'package:study_frontend/register.dart';
 
 class loginPage extends StatefulWidget {
   const loginPage({super.key});
@@ -13,8 +14,6 @@ class _loginPageState extends State<loginPage> {
   String _password = '';
   final _idEditingController = TextEditingController();
   final _pwdEditingController = TextEditingController();
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -84,6 +83,8 @@ class _loginPageState extends State<loginPage> {
                       foregroundColor: Colors.white,
                     ), onPressed: () {
                       print("Register Button Pressed");
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterPage())
+                      );
                   }, child: Text("Register"))
                 ],
               )
